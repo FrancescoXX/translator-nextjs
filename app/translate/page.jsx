@@ -15,7 +15,7 @@ const TranslatePage = () => {
 
   const handleTranslate = async (speechText) => {
     try {
-      const response = await axios.post("http://localhost:3000/translate", {
+      const response = await axios.post("http://198.199.68.165:3000/translate", {
         text: speechText,
         source_lang: sourceLang,
         target_lang: "Tagalog",
@@ -30,7 +30,7 @@ const TranslatePage = () => {
 
   const handlePreparedRequest = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/translate", {
+      const response = await axios.post("http://198.199.68.165:3000/translate", {
         text: "ciao mondo",
         source_lang: "Italian",
         target_lang: "Greek",
@@ -45,7 +45,7 @@ const TranslatePage = () => {
 
   const handleDummyRequest = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/dummy");
+      const response = await axios.get("http://198.199.68.165:3000/dummy");
       alert(JSON.stringify(response.data));
     } catch (error) {
       console.error("Error:", error);
